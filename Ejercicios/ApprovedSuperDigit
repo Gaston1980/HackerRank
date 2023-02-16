@@ -25,6 +25,7 @@ function superDigit(n, k) {
 n = "9"
 k = 5
 console.log(superDigit(n, k))
+
 /* Explicacion:
 In the code above, we set our base case with the if statement. 
 If the length of n is equal to 1, we will return n. 
