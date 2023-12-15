@@ -6,8 +6,8 @@
 function countingSort(arr) { // arr =  [2,2,4,4,1]
     let freqArr = new Array(100).fill(0); // [0,0,0,0,0,....]
   
-    for (let i of arr) { // i=2                 i=2                     i=4                 i=4                     i=1
-      freqArr[i] += 1; // [0,0,1,0,0,0 ......]  [0,0,2,0,0,0 ......]  [0,0,2,0,1,0 ......]  [0,0,2,0,2,0 ......]  [0,1,2,0,2,0 ......]
+    for (let value of arr) { // recorro cada elemento del array -->value=2                 value=2                     value=4                 value=4                     value=1
+      freqArr[value] += 1; // asi me va quedando                   [0,0,1,0,0,0 ......]  [0,0,2,0,0,0 ......]  [0,0,2,0,1,0 ......]  [0,0,2,0,2,0 ......]  [0,1,2,0,2,0 ......]
     }
   
     return freqArr;
