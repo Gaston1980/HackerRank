@@ -16,6 +16,30 @@ let findMaxNode = (root)=>{
         return findMaxNode(root.right);
 }
 
+let findMaxTwo = (root) => {
+    let mayores = []
+  
+    if(!root.right.right){
+      mayores.push(root.right.data)
+      mayores.push(root.data)
+      return mayores
+    }
+    if(!root.right) return mayores
+    if(root.right)  return findMaxTwo(root.right)
+  };
+ 
+  let findMinTwo = (root) => {
+    let menores = []
+  
+    if(!root.left.left){
+      menores.push(root.left.data)
+      menores.push(root.data)
+      return menores
+    }
+    if(!root.left) return menores
+    if(root.left)  return findMinTwo(root.left)
+  };
+
 var root = { //tree
     "data": 10,
       "left": {
@@ -49,3 +73,5 @@ var root = { //tree
     
     console.log(findMinNode(root))
     console.log(findMaxNode(root))
+    console.log(findMaxTwo(root))
+    console.log(findMinTwo(root))
