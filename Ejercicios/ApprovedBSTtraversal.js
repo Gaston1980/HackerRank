@@ -1,13 +1,11 @@
 //Imprimir los nodos de un arbol segun el orden: preOrder, inOrder, postOrder
 
 let preOrder = function(root) {
-    var aux = []
     if (root){
     console.log(root.data)
     preOrder(root.left);
     preOrder(root.right);
 }
-return aux
 }
 
 let inOrder = (root) =>  {
@@ -61,7 +59,7 @@ var root = { //tree
     }
   }
 
-  //console.log(preOrder(root))
-  //console.log(inOrder(root))
-  //console.log(postOrder(root))
-  console.log(findMinNode(root))
+  console.log(preOrder(root))
+  console.log(inOrder(root))
+  console.log(postOrder(root))
+ 
